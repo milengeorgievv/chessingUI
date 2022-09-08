@@ -1,0 +1,596 @@
+<div>
+  <h2>Garry Kasparov (2800)</h2>
+  <div cdkDropListGroup class="board-boundary">
+    <div>
+      <div style="display: inline-block;" class="example-container">
+        <div cdkDropList [cdkDropListData]="a8" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of a8" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="b8" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of b8" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="c8" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of c8" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="d8" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of d8" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;  background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="e8" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of e8" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="f8" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of f8" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="g8" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of g8" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="h8" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of h8" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="display: inline-block;" class="example-container">
+        <div cdkDropList [cdkDropListData]="a7" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of a7" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="b7" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of b7" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="c7" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of c7" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="d7" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of d7" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="e7" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of e7" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="f7" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of f7" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="g7" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of g7" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="h7" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of h7" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="display: inline-block;" class="example-container">
+        <div cdkDropList [cdkDropListData]="a6" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of a6" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="b6" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of b6" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="c6" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of c6" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="d6" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of d6" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="e6" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of e6" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="f6" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of f6" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="g6" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of g6" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="h6" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of h6" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="display: inline-block;" class="example-container">
+        <div cdkDropList [cdkDropListData]="a5" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of a5" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="b5" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of b5" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="c5" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of c5" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="d5" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of d5" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="e5" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of e5" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="f5" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of f5" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="g5" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of g5" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="h5" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of h5" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="display: inline-block;" class="example-container">
+        <div cdkDropList [cdkDropListData]="a4" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of a4" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="b4" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of b4" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="c4" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of c4" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="d4" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of d4" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="e4" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of e4" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="f4" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of f4" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="g4" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of g4" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="h4" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of h4" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="display: inline-block;" class="example-container">
+        <div cdkDropList [cdkDropListData]="a3" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of a3" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="b3" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of b3" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="c3" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of c3" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="d3" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of d3" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="e3" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of e3" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="f3" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of f3" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="g3" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of g3" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="h3" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of h3" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="display: inline-block;" class="example-container">
+        <div cdkDropList [cdkDropListData]="a2" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of a2" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="b2" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of b2" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="c2" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of c2" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="d2" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of d2" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="e2" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of e2" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="f2" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of f2" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="g2" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of g2" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="h2" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of h2" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="display: inline-block;" class="example-container">
+        <div cdkDropList [cdkDropListData]="a1" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of a1" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="b1" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of b1" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="c1" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of c1" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="d1" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of d1" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="e1" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of e1" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="f1" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of f1" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="g1" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove" style="background-color: dimgray;">
+          <div class="example-box" *ngFor="let item of g1" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain; background-color: dimgray;"></div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="h1" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="validateMove">
+          <div class="example-box" *ngFor="let item of h1" cdkDrag [cdkDragData]="item"
+            cdkDragBoundary=".board-boundary"><img src=".//src/assets/{{item}}.png" height="80px" width="80px"
+              style="object-fit: contain;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>Bobby Fischer (2700)</h2>
+</div>

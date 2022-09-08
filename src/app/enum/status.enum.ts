@@ -1,0 +1,3 @@
+export enum Status {
+    OFFLINE = 'OFFLINE', ONLINE = 'ONLINE', PLAYING = 'PLAYING', WAITING = 'WAITING'
+}

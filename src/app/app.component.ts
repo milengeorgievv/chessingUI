@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { Player } from './interface/player';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'chessing-ui';
+  
+  constructor(private router: Router) { }
+
+  goToProfile() {
+    this.router.navigate(['/', 'profile']);
+  }
+  goToPlay() {
+    this.router.navigate(['/', 'play']);
+  }
+
+  goToPuzzle() {
+    this.router.navigate(['/', 'puzzles']);
+  }
+  
+  goToPlayers() {
+    this.router.navigate(['/', 'players']);
+  }
+  goToAuthor() {
+    this.router.navigate(['/', 'author']);
+  }
 }
